@@ -4,13 +4,8 @@ h1 {
 }
 
 h2 {
-	color: lightblue;
-    width:30%;
-    height:100px;
-    background-color: lightyellow;
-    margin:0 auto;
-    text-align:center;
-    transform:skew(15deg,15deg);
+	color: rgb(250, 6, 148);
+    background-color: rgb(4, 210, 251);
 }
 
 h3 {
@@ -20,7 +15,7 @@ h3 {
 p {
 	margin: 5px;
 	font-family: cursive;
-    color: red;
+    color: rgb(217, 255, 0);
     margin-left: 5px;
-	background-color: lightyellow;
+	background-color: rgb(143, 70, 153);
 }
