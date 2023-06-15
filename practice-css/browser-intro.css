@@ -1,13 +1,14 @@
 p {
 	color: navy;
+	background-color: #dfdfdf;
 }
 
 p.info {
-	font-size: 10pt;
+	font-size: small;
 }
 
 h1 {
-	background-color: #7f7fcf;
+	background-color: white;
 }
 
 h2 {
