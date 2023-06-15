@@ -6,6 +6,15 @@ h1 {
 h2 {
 	color: lightblue;
 }
+
 h3 {
 	color: lightyellow;
+}
+
+p {
+	margin: 5px;
+	font-family: cursive;
+    color: lightgreen;
+    margin-left: 5px;
+	background-color: lightyellow;
 }
