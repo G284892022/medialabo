@@ -1,15 +1,15 @@
 h1 {
-	color: white;
-	text-shadow: blue 1px 0px 10px;
+	color: rgb(255, 153, 0);
+	text-shadow: (255, 0, 0) 1px 0px 10px;
 }
 
 h2 {
-	color: rgb(250, 6, 148);
+	color: rgb(196, 87, 189);
     background-color: rgb(4, 210, 251);
 }
 
 h3 {
-	color: lightgreen;
+	color: rgb(255, 0, 0);
 }
 
 p {
