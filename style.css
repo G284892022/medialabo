@@ -1,6 +1,6 @@
 h1 {
 	color: white;
-	text-shadow: navy 1px 0px 10px;
+	text-shadow: blue 1px 0px 10px;
 }
 
 h2 {
@@ -14,7 +14,7 @@ h3 {
 p {
 	margin: 5px;
 	font-family: cursive;
-    color: lightgreen;
+    color: red;
     margin-left: 5px;
 	background-color: lightyellow;
 }
