@@ -19,8 +19,8 @@ function hantei() {
   let yoso = 4;
   
   // 課題3-1: 正解判定する
-  if(kotae===4){
-    kaisu++;
+  if(kotae===yoso){
+    kaisu==kaisu+5;
     console.log("正解です．おめでとう!");
   }
   if(kaisu===3){
