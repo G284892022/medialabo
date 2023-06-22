@@ -19,6 +19,15 @@ function hantei() {
   let yoso = 4;
   
   // 課題3-1: 正解判定する
+  if(kotae===4){
+    kaisu++;
+    console.log("正解です．おめでとう!");
+  }
+  if(kaisu===3){
+    kaisu++;
+    console.log("まちがい．残念でした答えは 4 です．");
+  }
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
+
 }
