@@ -1,0 +1,21 @@
+h1 {
+	color: white;
+	text-shadow: blue 1px 0px 10px;
+}
+
+h2 {
+	color: rgb(250, 6, 148);
+    background-color: rgb(4, 210, 251);
+}
+
+h3 {
+	color: lightgreen;
+}
+
+p {
+	margin: 5px;
+	font-family: cursive;
+    color: rgb(217, 255, 0);
+    margin-left: 5px;
+	background-color: rgb(143, 70, 153);
+}
