@@ -14,9 +14,9 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-let h2 = document.querySelector('ex42'); 
-let p = document.createElement('p'); 
-
+let h = document.querySelector('ex42'); 
+let p = document.createElement('text-emphasis: sesame green;'); 
+document.write(p);
 // 練習4-3 写真表作成プログラム
 
 
@@ -27,4 +27,4 @@ li.remove();
 // 練習4-5 箇条書き追加プログラム
 for (const element of data) {
 	console.log(element);
-  } 
+} 
