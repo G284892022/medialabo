@@ -17,7 +17,7 @@ let data = [
 let h = document.querySelector('ex42'); 
 let pLink = document.createElement('p'); 
 pLink.textContent = '写真表と都市の緯度経度のページです';
-document.write(p);
+pLink.textContent;
 // 練習4-3 写真表作成プログラム
 
 
