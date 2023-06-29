@@ -22,7 +22,7 @@ let p = document.createElement('p');
 
 // 練習4-4 箇条書き削除プログラム
 let ul = document.querySelector('location'); 
-li.remove(); 
+ul.remove(); 
 
 // 練習4-5 箇条書き追加プログラム
 for (const element of data) {
