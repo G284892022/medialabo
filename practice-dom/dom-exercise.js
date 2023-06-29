@@ -16,7 +16,7 @@ let data = [
 // 練習4-2 メッセージ追加プログラム
 let h = document.querySelector('ex42'); 
 let pLink = document.createElement('p'); 
-pLink.setAttribute('写真表と都市の緯度経度のページです');
+pLink.textContent = '写真表と都市の緯度経度のページです';
 document.write(p);
 // 練習4-3 写真表作成プログラム
 
