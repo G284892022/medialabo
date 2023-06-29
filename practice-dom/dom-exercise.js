@@ -19,17 +19,30 @@ let pLink = document.createElement('p');
 pLink.textContent = '写真表と都市の緯度経度のページです';
 h.insertAdjacentElement('afterend', pLink);
 // 練習4-3 写真表作成プログラム
-
-
+let p = document.querySelector('div#phototable'); 
+let img_element1 = document.createElement('p');
+let img_element2 = document.createElement('p');
+let img_element3 = document.createElement('p');
+let s = document.createElement('img');
+let t = document.createElement('img');
+let u = document.createElement('img');
+s.setAttribute('src', 'taro.png');
+t.setAttribute('src', 'jiro.png');
+u.setAttribute('src', 'hanako.png');
+img_element1.insertAdjacentElement('beforeend', s);
+p.insertAdjacentElement('beforeend', img_element1);
+img_element2.insertAdjacentElement('beforeend', t);
+p.insertAdjacentElement('beforeend', img_element2);
+img_element3.insertAdjacentElement('beforeend', u);
+p.insertAdjacentElement('beforeend', img_element3);
 // 練習4-4 箇条書き削除プログラム
 let li = document.querySelectorAll('ul#location > li'); 
-for(const del of li){
+for(let del of li){
 	del.remove(); 
 }
-
 //練習4-5 箇条書き追加プログラム
-let ul = document.querySelectorAll('ul'); 
-for (const element of data) {
+let ul = document.querySelector('ul'); 
+for (let element of data) {
 	let kLink = document.createElement('li'); 
     kLink.textContent = element.name+"... 緯度:"+element.lat+",経度:"+element.lng;
 	ul.insertAdjacentElement('beforeend', kLink);
