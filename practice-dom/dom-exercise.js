@@ -22,12 +22,15 @@ h.insertAdjacentElement('afterend', pLink);
 
 
 // 練習4-4 箇条書き削除プログラム
-let li = document.querySelector('ul#location'); 
-li.remove(); 
+let li = document.querySelectorAll('ul#location > li'); 
+for(const del of li){
+	del.remove(); 
+}
 
-// 練習4-5 箇条書き追加プログラム
+//練習4-5 箇条書き追加プログラム
+let ul = document.querySelectorAll('ul'); 
 for (const element of data) {
-	let kLink = document.createElement('k'); 
-    kLink.textContent = element;
-	h2.insertAdjacentElement('afterend', kLink);
+	let kLink = document.createElement('li'); 
+    kLink.textContent = element.name+"... 緯度:"+element.lat+",経度:"+element.lng;
+	ul.insertAdjacentElement('beforeend', kLink);
 } 
