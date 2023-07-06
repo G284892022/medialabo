@@ -94,3 +94,20 @@ console.log(data.list.g1[1].title);
 console.log(data.list.g1[1].subtitle);
 // console.log(data.list.g1[1].content);
 console.log(data.list.g1[1].act);
+// 2. イベントハンドラの定義
+
+let b = document.querySelector('button#print');
+b.addEventListener('click', greeting);
+
+let suuji = document.createElement("p");
+function greeting() {
+	let i = document.querySelector('input[name="shimei"]');
+	let shimei = i.value;
+  if(shimei==="0409"){
+    suuji.textContent="みんなうた「ごっつぉさま」／「超変身！ミネラルフォーマーズ」";
+  }
+  if(shimei==="0100"){
+    suuji.textContent="パラスポーツ×アニメ「アニ×パラ」▽パラアルペンスキーテーマ曲江口寿史×ＡＣＣ";
+  }
+  b.insertAdjacentElement("afterend",suuji);
+}
