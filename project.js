@@ -154,10 +154,24 @@ function showResult(resp) {
     // data.x を出力
     console.log(data.x);
 
-    let ul = document.querySelector('ul'); 
-      let li = document.createElement('li');
-      li.textContent = data.list.g1[0].title;
-      ul.insertAdjacentElement('beforeend', li);
+    let ul = document.querySelector('td#siage');
+    ul.textContent = data.list.g1[0].title;
+    let kaisi = document.querySelector('td#kaisi');
+    kaisi.textContent = data.list.g1[0].start_time;
+    let owari = document.querySelector('td#owari');
+    owari.textContent = data.list.g1[0].end_time;
+    let kyoku = document.querySelector('td#kyoku');
+    kyoku.textContent = data.list.g1[0].service.name;
+    let sub = document.querySelector('td#sub');
+    sub.textContent = data.list.g1[0].subtitle;
+    let con = document.querySelector('td#con');
+    con.textContent = data.list.g1[0].content;
+    let act = document.querySelector('td#act');
+    act.textContent = data.list.g1[0].act;
+    // let ul = document.querySelector('ul'); 
+    // let li = document.createElement('li');
+    // li.textContent = data.list.g1[0].title;
+    // ul.insertAdjacentElement('beforeend', li);
 }
 
 // 通信エラーが発生した時の処理
