@@ -103,10 +103,10 @@ let suuji = document.createElement("p");
 function greeting() {
 	let i = document.querySelector('input[name="shimei"]');
 	let shimei = i.value;
-  if(shimei==="0409"){
+  if(shimei==="0409"||shimei=="音楽"){
     suuji.textContent="みんなうた「ごっつぉさま」／「超変身！ミネラルフォーマーズ」";
   }
-  if(shimei==="0100"){
+  if(shimei==="0100"||shimei=="スポーツ"){
     suuji.textContent="パラスポーツ×アニメ「アニ×パラ」▽パラアルペンスキーテーマ曲江口寿史×ＡＣＣ";
   }
   b.insertAdjacentElement("afterend",suuji);
