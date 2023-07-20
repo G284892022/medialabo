@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>NHK の番組表</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="project.js" defer></script>
   </head>
   <body>
@@ -110,8 +111,21 @@
 </html>
 <body>
 <h1>検索</h1>
+
+	<div>
+		<input type="radio" name="year" id="g1" value="g1">
+		<label for="year2">NHK総合</label>
+	</div>
+	<div>
+		<input type="radio" name="year" id="e1" value="e1">
+		<label for="year3">Eテレ</label>
+	</div>
+
 <label for="shimei">ジャンル数: </label>
 <input type="text" name="shimei" size="10">
 <button id="print">番組検索</button>
+<ul>
+<li></li>
+</ul>
 </body>
 </html>

@@ -96,18 +96,91 @@ console.log(data.list.g1[1].subtitle);
 console.log(data.list.g1[1].act);
 // 2. イベントハンドラの定義
 
-let b = document.querySelector('button#print');
-b.addEventListener('click', greeting);
+// let b = document.querySelector('button#print');
+// b.addEventListener('click', greeting);
 
-let suuji = document.createElement("p");
-function greeting() {
-	let i = document.querySelector('input[name="shimei"]');
-	let shimei = i.value;
-  if(shimei==="0409"||shimei=="音楽"){
-    suuji.textContent="みんなうた「ごっつぉさま」／「超変身！ミネラルフォーマーズ」";
-  }
-  if(shimei==="0100"||shimei=="スポーツ"){
-    suuji.textContent="パラスポーツ×アニメ「アニ×パラ」▽パラアルペンスキーテーマ曲江口寿史×ＡＣＣ";
-  }
-  b.insertAdjacentElement("afterend",suuji);
+// let suuji = document.createElement("p");
+// function greeting() {
+// 	let i = document.querySelector('input[name="shimei"]');
+// 	let shimei = i.value;
+//   if(shimei==="0409"||shimei=="音楽"){
+//     suuji.textContent="みんなうた「ごっつぉさま」／「超変身！ミネラルフォーマーズ」";
+//   }
+//   if(shimei==="0100"||shimei=="スポーツ"){
+//     suuji.textContent="パラスポーツ×アニメ3「アニ×パラ」▽パラアルペンスキーテーマ曲江口寿史×ＡＣＣ";
+//   }
+//   b.insertAdjacentElement("afterend",suuji);
+// }
+let b = document.querySelector('#print');
+b.addEventListener('click', sendRequest);
+
+// 通信を開始する処理
+function sendRequest() {
+  let rs = document.querySelectorAll('input[name="year"]');
+  let urlhenkou;
+	for (let r of rs) {
+		if (r.checked) {		// r が選択されていたら
+			//r.value;
+      urlhenkou=r.value;
+		}
+	}
+  let i = document.querySelector('input[name="shimei"]');
+  let shimei = i.value;
+  console.log(shimei);
+    // URL を設定
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/g1-0000-j.json';
+    url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/'+urlhenkou+'-'+shimei+'-j.json';
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        //.catch(showError)   // 通信失敗
+        //.then(finish);      // 通信の最後の処理
 }
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+    // data をコンソールに出力
+    console.log(data);
+
+    // data.x を出力
+    console.log(data.x);
+
+    let ul = document.querySelector('ul'); 
+      let li = document.createElement('li');
+      li.textContent = data.list.g1[0].title;
+      ul.insertAdjacentElement('beforeend', li);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('Ajax 通信が終わりました');
+}
+
+
+// function printAnswer() {
+// 	// name 属性が year の input 要素をすべて検索
+// 	let rs = document.querySelectorAll('input[name="year"]');
+//   let urlhenkou;
+// 	for (let r of rs) {
+// 		if (r.checked) {		// r が選択されていたら
+// 			r.value;
+//       urlhenkou=r.value;
+// 		}
+// 	}
+//   url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/'+ +'-'+urlhenkou+'-j.json';
+
+// }
